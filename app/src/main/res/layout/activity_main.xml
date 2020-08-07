@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backweather"
+    tools:context=".MainActivity">
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/searchCity"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchCity"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Your City Name Check Weather"
+        android:textColorHint="@color/white"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchbtn"
+        android:layout_below="@id/searchCity"
+        android:layout_alignParentRight="true"
+        android:text="Check"
+        android:layout_marginRight="30dp"
+        android:background="@color/lightblue"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchbtn"
+        android:id="@+id/cityName"
+        android:hint="City Name"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:hint="Date"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_below="@+id/cityName"
+        />
+
+<ImageView
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:id="@+id/weatherIcon"
+    android:layout_below="@+id/date"
+    android:layout_marginTop="0dp"
+    android:src="@drawable/day1"
+    android:layout_centerHorizontal="true"
+
+    />
+
+
+    <com.github.pavlospt.CircleView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/weatherIcon"
+        android:id="@+id/circleView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-20dp"
+        app:cv_titleText="title"
+        app:cv_subtitleText="subtitle"
+        app:cv_titleSize="23dp"
+        app:cv_subtitleSize="15dp"
+        app:cv_fillRadius="0.9"
+        app:cv_strokeWidthSize="5"/>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/humidity"
+            android:layout_below="@+id/circleView"
+            android:text="Humidity"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/white"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidityValue"
+        android:layout_below="@+id/humidity"
+        android:text="43.6"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/white"
+        />
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wind"
+            android:text="Wind"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/circleView"
+            android:layout_alignParentRight="true"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/windValue"
+        android:text="45.3"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/wind"
+        android:layout_alignParentRight="true"
+        />
+
+
+
+
+
+</RelativeLayout>
